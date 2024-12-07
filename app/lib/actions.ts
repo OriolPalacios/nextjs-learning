@@ -98,14 +98,15 @@ export async function updateInvoice(id: string,  prevState: State, formData: For
 }
 
 export async function deleteInvoice(id: string) {
-  throw new Error("Not implemented");
+  // throw new Error("Not implemented");
   try {
     await sql`DELETE FROM invoices WHERE id=${id}`;
   } catch (error) {
-    return {
-      message: 'There was an error deleting the invoice',
-    }
+    // return {
+    //   message: 'There was an error deleting the invoice',
+    // }
+    console.log('There was an error deleting the invoice');
   }
   revalidatePath('/dashboard/invoices');
-  return { message: "Invoice deleted successfully" };
+  // return { message: "Invoice deleted successfully" };
 }
