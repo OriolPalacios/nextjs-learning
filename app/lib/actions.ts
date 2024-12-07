@@ -98,7 +98,7 @@ export async function updateInvoice(id: string,  prevState: State, formData: For
 }
 
 export async function deleteInvoice(id: string) {
-  // throw new Error("Not implemented");
+  throw new Error("Not implemented");
   try {
     await sql`DELETE FROM invoices WHERE id=${id}`;
   } catch (error) {
